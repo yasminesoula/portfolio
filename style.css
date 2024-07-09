@@ -1,0 +1,188 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    background-color: #e3d8d9; 
+    border: pink;
+    border-radius: 50% ;
+    position: absolute;
+    pointer-events: none;
+    transition: transform 0.1s ease;
+    transform: translate(-50%, -50%);
+    z-index: 150;
+}
+body {
+    background-color: black;
+}
+.background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: back;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    z-index: 10;
+    
+}
+@keyframes back {
+    0%{
+        rotate: 360deg;
+    }
+    25%{
+        rotate: 50deg;
+    }
+    50%{
+        rotate: 50 deg ;
+    }
+    75%{
+        rotate: 180 deg;
+    }
+    100%{
+        rotate:-90 deg;
+    }
+}
+.name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    translate: 50px -300px;
+    font-size: 120px;
+    font-family:'M PLUS 1 Code', monospace; ;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar ul{
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+.navbar ul a {
+    text-decoration: none;
+    color: rgb(235, 230, 230);
+}
+.logo{
+    color: white;
+    display: flex;
+    justify-content:space-between;
+    text-align: center;
+    align-items: center;
+    translate: 50px;
+    font-size: 25px;
+    font-family:'M PLUS 1 Code', monospace;
+    word-spacing: 0.5em;
+    translate: 0 20px;
+    
+
+}
+@font-face {
+        font-family: 'Baskervville SC';
+        src: url('fonts/BaskervvilleSC.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    .y{
+        margin-left: 50px;
+    }
+    .s{
+        margin-right: 50px;
+    }
+    .container{
+        text-align: center;
+    }
+.contact{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    height: 100vh;
+
+}
+#e{
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+}
+#m{
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+}
+#c{
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+}
+#email{
+    width: 80%;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+#motif{
+        width: 80%;
+        margin-left: 50px;
+        margin-bottom: 50px;
+        height: 100px;
+        background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+#commentaire{
+        width: 80%;
+        margin-left: 50px;
+        margin-bottom: 50px;
+        height: 200px;
+        background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.works {
+    display: flex;
+    justify-content: space-around;
+}
+.image-container {
+    position: relative;
+    width: 300px;
+    height: 400px;
+}
+.image-container img, .image-container .description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s;
+}
+.image-container .description {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+.image-container:hover .description {
+    opacity: 1;
+}
+.image-container:hover img {
+    opacity: 0;
+}
